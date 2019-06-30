@@ -4,8 +4,9 @@ import "github.com/gin-gonic/gin"
 
 func main() {
 	r := gin.Default()
+	r.LoadHTMLGlob("templates/*.html")
 	r.GET("/", func(c *gin.Context) {
-		c.String(200, "Hello,World!")
+		c.HTML(200, "index.html", gin.H{})
 	})
 	r.Run()
 }
