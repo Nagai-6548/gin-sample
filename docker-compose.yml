@@ -1,0 +1,10 @@
+version: "3"
+services:
+  gin:
+    build: .
+    ports:
+      - 1234:8080
+    volumes:
+      - .:/go
+    stdin_open: true
+    tty: true
